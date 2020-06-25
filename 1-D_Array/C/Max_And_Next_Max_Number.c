@@ -17,41 +17,41 @@ int main()
 
     // max is for maximum number and 
     // smax for next(second) maximum number
-    int max, smax;
+    int m, sm;
 
     // Assigning max and smax with arr[0] and arr[1] depending
     // on the condition max > smax
     if (arr[0] > arr[1])
     {
-        max = arr[0];
-        smax = arr[1];
+        m = arr[0];
+        sm = arr[1];
     }
     else 
     {
-        max = arr[1];
-        smax = arr[0];
+        m = arr[1];
+        sm = arr[0];
     }
     
     // Comparing rest of the element in the array
     for (i = 2; i < num; i++)
     {
-        if (arr[i] > smax)
+        if (arr[i] > sm)
         {
-            if (arr[i] > max)
+            if (arr[i] > m)
             {
-                smax = max;				
-                max = arr[i];
+                sm = m;				
+                m = arr[i];
             }
             else
             {
-                smax = arr[i];
+                sm = arr[i];
             }
         }
     }
 
-    printf("Max: %d\n", max);
+    printf("Max: %d\n", m);
 
-    printf("Next max: %d", smax);
+    printf("Second max: %d", sm);
 }
 
 /*
